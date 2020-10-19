@@ -14,7 +14,8 @@ h1 {
   text-decoration: dashed;
   text-align: center;
 }
-body {
+body{
+  height: 100vh;
   background-image: url("https://i0.wp.com/lemedialabo.francophonie.org/wp-content/uploads/2018/05/quiz-2058883_960_720.png?zoom=2.625&resize=396%2C214");
   background-size: contain;
 
@@ -40,4 +41,31 @@ body {
 image {
   max-width: 100%;
   height: auto;
+}
+
+.q1,.q2,.q3,.q4{
+  text-align: center;
+   font-size: xx-large;
+   font-style: oblique;
+  font-weight: 300;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.ans1-btn,.ans2-btn,.ans3-btn,.ans4-btn{
+  border: 1px  #999 ;
+  background-color:black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+  width: auto;
+  margin: 200px;
+}
+.ans1-btn,.ans2-btn,.ans3-btn,.ans4-btn: :hover{
+  border-color:  red;
+}
+.container{
+
+  position: relative;
+  padding: 25%;
+  font-size: 30px;
 }
