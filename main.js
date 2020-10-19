@@ -1,1 +1,2 @@
-function startquiz()
+const startbutton = document.getElementById('start-btn')
+
