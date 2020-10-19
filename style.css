@@ -1,7 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+
 h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-style: italic;
@@ -9,16 +6,16 @@ h2 {
   text-align: center;
 }
 h1 {
+  font-family: 'Sansita Swashed', cursive;
   font-size: 3.5rem;
   font-style: oblique;
   text-decoration: dashed;
   text-align: center;
 }
-body{
+main {
   height: 100vh;
-  background-image: url("https://i0.wp.com/lemedialabo.francophonie.org/wp-content/uploads/2018/05/quiz-2058883_960_720.png?zoom=2.625&resize=396%2C214");
   background-size: contain;
-
+  background-image: url(https://img.freepik.com/vecteurs-libre/quiz-dans-style-bande-dessinee-pop-art_175838-505.jpg?size=626&ext=jpg);
   background-color: #999999;
   background-repeat: no-repeat;
 }
@@ -26,46 +23,52 @@ body{
 #start {
   height: 50%;
   font-size: 500%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-style: oblique;
+  font-family: 'Sansita Swashed', cursive;
   margin-bottom: 100%;
   width: 50%;
   border-radius: 25px;
   outline: none;
   border: none;
-  background-color: black;
-  color: #fff;
+  background-color: rgb(31, 169, 224);
+  color: rgb(245, 241, 241);
   margin: 30%;
   cursor: pointer;
 }
-image {
-  max-width: 100%;
-  height: auto;
-}
 
-.q1,.q2,.q3,.q4{
+
+.q1,
+.q2,
+.q3,
+.q4 {
+  font-family: 'Sansita Swashed', cursive;
+  margin-top: 20%;
   text-align: center;
-   font-size: xx-large;
-   font-style: oblique;
+  font-size: xx-large;
+  font-style: oblique;
   font-weight: 300;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.ans1-btn,.ans2-btn,.ans3-btn,.ans4-btn{
-  border: 1px  #999 ;
-  background-color:black;
+.ans1-btn,
+.ans2-btn,
+.ans3-btn,
+.ans4-btn {
+  border: 1px #999;
+  background-color: black;
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
   outline: none;
-  width: auto;
-  margin: 200px;
+  margin: 40px;
+  width: 125px;
+  height: 75px;
 }
-.ans1-btn,.ans2-btn,.ans3-btn,.ans4-btn: :hover{
-  border-color:  red;
+.ans1-btn,.ans2-btn,.ans3-btn,.ans4-btn: :hover {
+  border-color: red;
 }
-.container{
-
+.container {
+  display: flex;
   position: relative;
-  padding: 25%;
-  font-size: 30px;
+  margin: 0 auto;
+  font-size: 40px;
+  width: 50%;
 }
