@@ -1,2 +1,1 @@
-const startbutton = document.getElementById('start-btn')
-
+$('#main').hide
