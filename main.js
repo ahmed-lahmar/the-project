@@ -1,72 +1,62 @@
-var questions = [
-    {
-      question: 'What is 6*6?',
-      answers: [
-        { text: '36', correct: true },
-        { text: '22', correct: false },
-        { text: '32', correct: false },
-        { text: '24', correct: false }
-      ]
-    },
-    {
-      question: 'If you have cryophobia, what are you afraid of?',
-      answers: [
-        { text: 'Ice/cold', correct: true },
-        { text: 'heights', correct: false },
-        { text: 'speed', correct: false },
-        { text: 'darkness', correct: false }
-      ]
-    },
-    {
-      question: 'What is seven cubed?',
-      answers: [
-        { text: '42', correct: false },
-        { text: '343', correct: true },
-        { text: '77', correct: false },
-        { text: '56', correct: false }
-      ]
-    },
-    {
-      question: 'In what part of the body would you find the fibula?',
-      answers: [
-        { text: 'arm', correct: false },
-        { text: 'leg', correct: true },
-        { text: 'head', correct: false },
-        { text: 'stomach', correct: false }
-      ]
-    }
-  ]
+let date =new Date
+let now = date.getHours()+":"+date.getMinutes()
+const addButton = document.querySelector(".addButton");
+var input = document.querySelector(".input");
+const container = document.querySelector(".container");
 
-
- var score = 0;
-  
- function answer (object){
-    $('body').append('<div id="questions" class="q1" >'+object.question+'</div>');
-    $('#questions').append('<div class="container"></div>');
-    $('.container').append('<button id="ans2"  class="ans2-btn" onclick="nextQuestion">'+object.answers[0].text+'</button>');
-    $('.container').append('<button id="ans1"  class="ans1-btn" onclick="nextQuestion">'+object.answers[1].text+'</button>');
-    $('.container').append('<button id="ans3"  class="ans3-btn" onclick="nextQuestion">'+object.answers[2].text+'</button>');
-    $('.container').append('<button id="ans4"  class="ans4-btn" onclick="nextQuestion">'+object.answers[3].text+'</button>');
-
-}
-
-
-
- answer({
-    question: 'In what part of the body would you find the fibula?',
-    answers: [
-      { text: 'arm', correct: false },
-      { text: 'leg', correct: true },
-      { text: 'head', correct: false },
-      { text: 'stomach', correct: false }
-    ]
-  })
+function item(itemName) {
+  function createDiv(itemName) {
  
+    var input = document.createElement("input"); 
+    input.value = itemName;
+    input.disabled = true;
+    input.type = "text";
+    input.classList.add("item_input"); 
 
-  function  all( array) {
-      
+  
+    var itemBox = document.createElement("div");
+    itemBox.classList.add("item");
+
+    
+    var editButton = document.createElement("button"); 
+    editButton.innerHTML = "CHANGE";
+    editButton.classList.add("editButton");
+
+    var removeButton = document.createElement("button"); 
+    removeButton.innerHTML = "DELETE"+"  "+String(now);
+    removeButton.classList.add("removeButton");
+
+
+    container.appendChild(itemBox);
+    itemBox.appendChild(input);
+    itemBox.appendChild(editButton);
+    itemBox.appendChild(removeButton);
+
+    editButton.addEventListener("click", () => edit(input)); 
+    removeButton.addEventListener("click", () => remove(itemBox)); 
   }
 
+  function edit(input) {
+    input.disabled = !input.disabled;
+  }
 
-  
+  function remove(itemBox) {
+    container.removeChild(itemBox);
+  }
 
+  createDiv(itemName);
+}
+
+function check() {
+  if (input.value !== "") {
+    new item(input.value);
+    input.value = "";
+  }
+}
+
+addButton.addEventListener("click", check);
+window.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
+    check();
+  }
+});
