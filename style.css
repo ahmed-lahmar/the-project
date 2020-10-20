@@ -16,20 +16,25 @@ body {
 }
 
 #start {
-  height: 50%;
+  font-size: 50px; 
+  height: 30%;
   margin-top: 60px;
   align-items: center;
-  width: 50%;
-  border-radius: 40px;
+  width: 30%;
+  border-radius: 25px;
   outline: none;
   border: none;
   background-color: black;
   color: black;
-  margin-left: 300px;
+  margin-left: 36%;
   cursor: pointer;
   padding: 5%;
 }
-
+.q2,
+.q3,
+.q4 {
+  display: none;
+}
 .q1,
 .q2,
 .q3,
@@ -54,7 +59,10 @@ body {
   width: 125px;
   height: 75px;
 }
-.ans1-btn,.ans2-btn,.ans3-btn,.ans4-btn: :hover {
+.ans1-btn,
+.ans2-btn,
+.ans3-btn,
+.ans4-btn:hover {
   border-color: red;
 }
 .container {
@@ -65,24 +73,31 @@ body {
   width: 50%;
 }
 
+
+
+a {
+  font-size: 500%;
+  color: cornsilk;
+}
+
+#score {
+  font-size: 500%;
+}
+#score {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
 #submit {
   height: 50%;
-  font-size: 500%;
-
-  margin-bottom: 100%;
-  width: 50%;
-  border-radius: 25px;
+  margin-top: 202px;
+  align-items: center;
+  width: 15%;
+  border-radius: 40px;
   outline: none;
   border: none;
-  background-color: rgb(31, 169, 224);
-  color: rgb(245, 241, 241);
-  margin: 30%;
+  color: black;
+  margin-left: 44%;
   cursor: pointer;
+  padding: 2%;
 }
-div.q3 {
-  box-sizing: cornflowerblue;
-}
- a{
-   font-size:500%;
-   color: cornsilk;
- }

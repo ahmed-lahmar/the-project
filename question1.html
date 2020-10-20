@@ -2,21 +2,44 @@
 <html>
     <head>
 <title> Quizz</title>
-<script defer src="main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
 <link href="style.css" rel="stylesheet">
     </head>
     <body>
         
+        <p id='score'></p>
         <div id='questions' class="q1" >What is 6*6? 
             <div class='container'>
-            <button id='ans1'  class="ans1-btn" onclick="testall()"><a href='question2.html'> 36</a> </button>
-            <button id='ans2'  class="ans2-btn" onclick="testall()"><a href='question2.html'> 42</a> </button>
-            <button id='ans3'  class="ans3-btn" onclick="testall()"><a href='question2.html'> 35</a> </button>
-            <button id='ans4'  class="ans4-btn" onclick="testall()"><a href='question2.html'> 34</a> </button>
-        </div>
+                <button id='36' class="ans1-btn" onclick="testFunc('36','q1','q2')">36</button>
+                <button id='42'  class="ans2-btn" onclick="wrong('q1','q2')"> 42 </button>
+                <button id='35'  class="ans3-btn" onclick="wrong('q1','q2')"> 35 </button>
+                <button id='34'  class="ans4-btn" onclick="wrong('q1','q2')"> 34 </button>
+            </div>
         </div> 
-    
+        <div class="q2" >If you have cryophobia, what are you afraid of?
+            <div class='container'>
+            <button id='speed'  class="ans1-btn" onclick="wrong('q2','q3')"> speed </button>
+            <button id='heights'  class="ans2-btn" onclick="wrong('q2','q3')"> heights </button>
+            <button id='darkness'  class="ans3-btn" onclick="wrong('q2','q3')"> darkness  </button>
+            <button id='cold/ice'  class="ans4-btn" onclick="testFunc('cold/ice','q2','q3')"> cold/ice </button>
+        </div></div>
+        <div class="q3" > What is seven cubed?
+            <div class='container'>
+            <button id='49'  class="ans1-btn" onclick="wrong('q3','q4')"> 49 </button>
+            <button id='81'  class="ans2-btn" onclick="wrong('q3','q4')"> 81 </button>
+            <button id='343'  class="ans3-btn" onclick="testFunc('343','q3','q4')"> 343  </button>
+            <button id='56'  class="ans4-btn" onclick="wrong('q3','q4')"> 56 </button>
+        </div></div>
+        <div class="q4" > In what part of the body would you find the fibula?,
+            <div class='container'>
+            <button id='arm'  class="ans1-btn" onclick="wrong('score')"> arm </button>
+            <button id='leg'  class="ans2-btn" onclick="testFunc('score')"> leg  </button>
+            <button id='head'  class="ans3-btn" onclick="wrong('score')"> head  </button>
+            <button id='stomach'  class="ans4-btn" onclick="wrong('score')"> stomach </button>
+        </div></div>
+        <h1 class='score' id='sc'>Your Score Is :</h1>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script defer src="main.js"></script>
+        <button id='submit' style="display: none;">Submit</button>
     </body>
 </html>
